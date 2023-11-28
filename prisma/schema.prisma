@@ -31,5 +31,6 @@ model Article {
 model Message {
   @@map("messages")
   id        Int     @id @default(autoincrement())
-  text     String
+  text      String
+  createdAt DateTime @default(now())
 }
