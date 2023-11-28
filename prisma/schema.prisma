@@ -27,3 +27,9 @@ model Article {
   author    User    @relation(fields: [authorId], references: [id])
   authorId  Int
 }
+
+model Message {
+  @@map("messages")
+  id        Int     @id @default(autoincrement())
+  text     String
+}
